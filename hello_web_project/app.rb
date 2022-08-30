@@ -24,4 +24,9 @@ class Application < Sinatra::Base
         message = params[:message]
         return "Thanks #{name}, you sent this message:#{message} "
     end
+
+    get '/names' do
+        names = params[:names]        
+    end
+    
 end
