@@ -8,15 +8,9 @@ RSpec.describe Application do
     # class so our tests work.
     let(:app) { Application.new }
 
-    context 'GET /names' do
-        it 'returns 200 OK' do
-            response = get('/names', names: 'Julia, Mary, Karim')
-
-            expect(response.status).to eq 200
-            expect(response.body).to eq 'Julia, Mary, Karim'
-        end
-
-
-        
+    it 'Sorts names alphabetically' do
+        response = post('/sort-names', names: 'Joe,Alice,Zoe,Julia,Kieran')
+        expect(response.status).to eq 200
+        expect(response.body).to eq 'Alice,Joe,Julia,Kieran,Zoe'
     end
-end 
+end
