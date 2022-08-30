@@ -1,11 +1,23 @@
+# REST routing (REST)
 
+# Artists resource
 
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+## List all artists
 
----
+GET /artists
 
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=resources%2Fmusic_library_database_app%2Froutes.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=resources%2Fmusic_library_database_app%2Froutes.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=resources%2Fmusic_library_database_app%2Froutes.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=resources%2Fmusic_library_database_app%2Froutes.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fweb-applications&prefill_File=resources%2Fmusic_library_database_app%2Froutes.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
+Response (200) OK
 
-<!-- END GENERATED SECTION DO NOT EDIT -->
+a list of all artists
+
+## Create a new artist
+
+POST /artist
+
+with body params:
+    name = "The Weeknd"
+    genre = "hip-hop"
+
+    Response (200) OK
+    No content just creates new resource (new artist)
+
