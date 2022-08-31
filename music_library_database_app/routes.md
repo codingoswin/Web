@@ -15,8 +15,8 @@ a list of all artists
 POST /artist
 
 with body params:
-    name = "The Weeknd"
-    genre = "hip-hop"
+    name = "Wild nothing"
+    genre = "Indie"
 
     Response (200) OK
     No content just creates new resource (new artist)
