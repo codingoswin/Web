@@ -46,22 +46,28 @@ class Application < Sinatra::Base
     return ''
   end
 
-  post '/artists' do
-    artist = Artist.new
-    artist.name = params[:name]
-    artist.genre = params[:genre]
-
-    repo = ArtistRepository.new
-    repo.create(artist)
-    
-    return ''
-  end
+  
 
   get '/artists' do
     repo = ArtistRepository.new
     @artists = repo.all
 
     return erb(:artists)
+  end
+  
+  post '/artists' do
+    artist = Artist.new
+    p artist.name = params[:artist_name]
+    p artist.genre = params[:artist_genre]
+
+    repo = ArtistRepository.new
+    repo.create(artist)
+    
+    redirect "/artists"
+  end
+
+  get '/new_artist' do
+    return erb(:new_artist)
   end
 
   get '/artists/:id' do
